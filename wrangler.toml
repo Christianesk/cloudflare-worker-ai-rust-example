@@ -1,0 +1,9 @@
+name = "cloudflare-worker-ai-rust-example"
+main = "build/index.js"
+compatibility_date = "2025-09-27"
+
+[build]
+command = "cargo install -q worker-build && worker-build --release"
+
+[ai]
+binding = "AI"

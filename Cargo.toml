@@ -1,0 +1,15 @@
+[package]
+name = "cloudflare-worker-ai-rust-example"
+version = "0.1.0"
+edition = "2021"
+authors = ["Christian Mena <christian.91.gm@hotmail.com>"]
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+worker = { version = "0.6.6" }
+worker-macros = { version = "0.6.6" }
+console_error_panic_hook = { version = "0.1.7" }
+http = "1.3"
+serde = "1.0.219"

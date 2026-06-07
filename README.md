@@ -1,6 +1,6 @@
 # cloudflare-worker-ai-rust-example
 
-Add worker ai functionality on cloudflare worker rust.
+Add worker ai functionality on cloudflare worker rust with mcp server tools.
 
 # Local Test
 
@@ -19,20 +19,18 @@ This document provides an example of how to make a `POST` request to an API that
 curl -X POST http://localhost:8787 \
   -H "Content-Type: application/json" \
   -d '{
-        "message": "Say hello world in five different languages"
+        "message": "Show me the list of users from Colombia."
       }'
 ```
 
 ## Response
-```json
-{
-    "response": "Here are \"Hello, World!\" in five different languages:\n\n1. **Spanish:**\n\"Hola, mundo\"\n2. **French:**\nBonjour, monde\"\n3. **German:**\nHallo Welt\"\n4. **Italian:**\nCiao mondo\"\n5. **Japanese:**\nすみーです\"",
-    "usage": {
-        "prompt_tokens": 18,
-        "completion_tokens": 64,
-        "total_tokens": 82
-    }
-}
+```text
+Here is the list of users from United States:
+
+- **Name:** John Doe  
+- **Country:** United States
+
+We found **1 user** matching your request.
 ```
 
 # Deploy

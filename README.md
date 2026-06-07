@@ -4,6 +4,19 @@ Add worker ai functionality on cloudflare worker rust with mcp server tools.
 
 # Local Test
 
+Config services and vars in `wrangler.toml` file
+```toml
+[ai]
+binding = "AI"
+
+[[services]]
+binding = "MCP_USERS"
+service = "your-mcp-service"
+
+[vars]
+MODEL_AI = "your-ai-model-binding"
+```
+
 Run command
 ```cmd
 npx wrangler dev --remote

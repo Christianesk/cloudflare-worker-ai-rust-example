@@ -7,3 +7,10 @@ command = "cargo install -q worker-build && worker-build --release"
 
 [ai]
 binding = "AI"
+
+[[services]]
+binding = "MCP_USERS"
+service = "your-mcp-service"
+
+[vars]
+MODEL_AI = "your-ai-model-binding"

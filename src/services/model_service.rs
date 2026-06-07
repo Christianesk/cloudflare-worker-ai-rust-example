@@ -47,7 +47,6 @@ pub async fn manage_message(mut req: Request, state: AppState) -> Result<Respons
     )
     .await?;
 
-    // 🔁 SI HAY TOOL CALL
     if let Some(tool_calls) = response["choices"][0]["message"]["tool_calls"].as_array() {
         if let Some(call) = tool_calls.first() {
             let name = call["function"]["name"].as_str().unwrap_or("");
